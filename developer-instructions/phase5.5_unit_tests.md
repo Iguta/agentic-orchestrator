@@ -1,0 +1,17 @@
+- Write unit tests for **ALL PRD Must-Have** features using 
+    - **Vitest**, 
+    - **@testing-library/react**, 
+    - **@testing-library/user-event**, 
+    - **@testing-library/jest-dom**.
+- Aim for **1 happy-path test per Must-Have** (basic render + one user action + assertion). Keep tests short and stable.
+- Each test MUST include meaningful **assertions** using `jest-dom` matchers (e.g. `toBeInTheDocument`, `toHaveTextContent`, `toBeChecked`).
+- Place tests in `src/tests/` as `*.test.ts(x)`; keep tests deterministic (no real network or external services).
+- Test **user-visible behavior only** (query by role/label/text; avoid implementation details).
+- EXECUTE from `codebase/`:
+  - `npm test`
+  - `npm run build`
+- Fix failures and re-run until BOTH commands pass.
+- Create/update at **PROJECT ROOT**:
+  - `TESTING.md` (how to run tests + PRD Must-Have coverage)
+  - `UNIT-TEST-REPORT.md` (pass/fail summary + tested features)
+- Do NOT proceed to the next phase until all above conditions are satisfied.
